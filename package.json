@@ -2,19 +2,23 @@
   "name": "node-react-app",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "client": "cd src/client && npm start",
+    "server": "nodemon src/server/server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "test": "cd src/client && npm test"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fullcalendar/core": "^6.1.20",
+    "@fullcalendar/daygrid": "^6.1.20",
+    "@fullcalendar/react": "^6.1.20",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
     "dotenv": "^8.1.0",
     "express": "^4.16.4",
-    "firebase": "^9.18.0",
     "fullcalendar": "^6.1.4",
+    "levenary": "^1.1.1",
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^1.19.3",
